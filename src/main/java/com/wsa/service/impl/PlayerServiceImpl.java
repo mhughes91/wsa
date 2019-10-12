@@ -1,5 +1,7 @@
 package com.wsa.service.impl;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,9 @@ public class PlayerServiceImpl implements PlayerService {
 
     public Iterable<Player> getAllPlayers() {
         return this.playerRepository.findAll();
+    }
+
+    public Optional<Player> getPlayerById(final Integer id) {
+        return this.playerRepository.findById(id);
     }
 }
