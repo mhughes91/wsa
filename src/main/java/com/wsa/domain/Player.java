@@ -15,5 +15,5 @@ public class Player extends BaseEntity {
     private static final long serialVersionUID = 2582081452130467071L;
 
     private String firstName;
-    private String lastName;
+    private String surname;
 }
