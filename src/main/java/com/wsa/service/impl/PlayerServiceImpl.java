@@ -19,10 +19,12 @@ public class PlayerServiceImpl implements PlayerService {
         this.playerRepository = playerRepository;
     }
 
+    @Override
     public Iterable<Player> getAllPlayers() {
         return this.playerRepository.findAll();
     }
 
+    @Override
     public Optional<Player> getPlayerById(final Integer id) {
         return this.playerRepository.findById(id);
     }
