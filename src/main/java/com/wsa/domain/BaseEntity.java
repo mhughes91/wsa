@@ -8,7 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @MappedSuperclass
+@Getter @Setter
 public abstract class BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 7431956084469201826L;
@@ -20,20 +24,4 @@ public abstract class BaseEntity implements Serializable {
     @Version
     @Column(name = "OBJ_VERSION")
     private int version;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public int getVersion() {
-        return version;
-    }
-
-    public void setVersion(int version) {
-        this.version = version;
-    }
 }
